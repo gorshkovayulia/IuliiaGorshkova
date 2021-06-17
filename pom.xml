@@ -12,35 +12,36 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
+        <java.version>1.8</java.version>
+        <encoding>UTF-8</encoding>
+        <maven-surefire-plugin.version>3.0.0-M5</maven-surefire-plugin.version>
+        <calculator.version>1.0</calculator.version>
+        <checkstyle.version>8.41.1</checkstyle.version>
+        <lombok.version>1.18.20</lombok.version>
+        <selenium-java.version>3.14.0</selenium-java.version>
     </properties>
 
     <profiles>
         <profile>
-            <id>multAndDivTests</id>
+            <id>multAndDivDoubleTests</id>
             <properties>
                 <suiteXmlFile>resources\testingConfigs\multAndDivDoubleTests.xml</suiteXmlFile>
             </properties>
-            <activation>
-                <activeByDefault>false</activeByDefault>
-            </activation>
         </profile>
         <profile>
-            <id>sumAndSubTests</id>
+            <id>addAndSubDoubleTests</id>
             <properties>
-                <suiteXmlFile>resources\testingConfigs\sumAndSubDoubleTests.xml</suiteXmlFile>
+                <suiteXmlFile>resources\testingConfigs\addAndSubDoubleTests.xml</suiteXmlFile>
             </properties>
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
         </profile>
         <profile>
-            <id>allTests</id>
+            <id>allDoubleTests</id>
             <properties>
                 <suiteXmlFile>resources\testingConfigs\allDoubleTests.xml</suiteXmlFile>
             </properties>
-            <activation>
-                <activeByDefault>false</activeByDefault>
-            </activation>
         </profile>
     </profiles>
 
@@ -63,6 +64,11 @@
             <scope>system</scope>
             <systemPath>${project.basedir}/src/main/resources/calculator-1.0.jar</systemPath>
         </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>3.14.0</version>
+        </dependency>
     </dependencies>
 
     <dependencyManagement>
@@ -83,9 +89,9 @@
                     <artifactId>maven-surefire-plugin</artifactId>
                     <version>3.0.0-M5</version>
                     <configuration>
-                        <includes>
-                            <include>test\resources\testingConfigs</include>
-                        </includes>
+                        <suiteXmlFiles>
+                            <suiteXmlFile>src/test/resources/testingConfigs/addAndSubDoubleTests.xml</suiteXmlFile>
+                        </suiteXmlFiles>
                     </configuration>
                 </plugin>
             </plugins>
