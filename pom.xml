@@ -23,24 +23,24 @@
 
     <profiles>
         <profile>
-            <id>multAndDivDoubleTests</id>
+            <id>multAndDivTests</id>
             <properties>
-                <suiteXmlFile>resources\testingConfigs\multAndDivDoubleTests.xml</suiteXmlFile>
+                <suiteXmlFile>resources\testingConfigs\hw1\multAndDivDoubleTests.xml</suiteXmlFile>
             </properties>
         </profile>
         <profile>
-            <id>addAndSubDoubleTests</id>
+            <id>addAndSubTests</id>
             <properties>
-                <suiteXmlFile>resources\testingConfigs\addAndSubDoubleTests.xml</suiteXmlFile>
+                <suiteXmlFile>resources\testingConfigs\hw1\addAndSubDoubleTests.xml</suiteXmlFile>
             </properties>
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
         </profile>
         <profile>
-            <id>allDoubleTests</id>
+            <id>allTests</id>
             <properties>
-                <suiteXmlFile>resources\testingConfigs\allDoubleTests.xml</suiteXmlFile>
+                <suiteXmlFile>resources\testingConfigs\hw1\allDoubleTests.xml</suiteXmlFile>
             </properties>
         </profile>
     </profiles>
@@ -82,19 +82,17 @@
     </dependencyManagement>
 
     <build>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-surefire-plugin</artifactId>
                     <version>3.0.0-M5</version>
                     <configuration>
                         <suiteXmlFiles>
-                            <suiteXmlFile>src/test/resources/testingConfigs/addAndSubDoubleTests.xml</suiteXmlFile>
+                            <suiteXmlFile>src/test/resources/testingConfigs/hw1/allDoubleTests.xml</suiteXmlFile>
                         </suiteXmlFiles>
                     </configuration>
                 </plugin>
             </plugins>
-        </pluginManagement>
     </build>
 </project>

@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="sumAndSubDoubleSuite" verbose="1">
-    <test name="sumAndSubDoubleTests">
-        <groups>
-            <run>
-                <include name="sumAndSubTests"/>
-            </run>
-        </groups>
+<suite name="addAndSubDoubleTests" verbose="1">
+    <test name="addAndSubDoubleTest">
     <classes>
         <class name="ru.training.at.hw1.AdditionDoubleTest"/>
         <class name="ru.training.at.hw1.SubtractionDoubleTest"/>
