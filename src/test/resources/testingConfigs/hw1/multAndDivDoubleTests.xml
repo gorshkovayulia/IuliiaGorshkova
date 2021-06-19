@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="multAndDivDoubleTests" verbose="1">
+    <test name="multAndDivDoubleTest">
+        <classes>
+            <class name="ru.training.at.hw1.MultiplicationDoubleTest"/>
+            <class name="ru.training.at.hw1.DivisionDoubleTest"/>
+        </classes>
+    </test>
+</suite>
